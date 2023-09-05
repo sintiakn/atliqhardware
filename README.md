@@ -1,4 +1,7 @@
-# atliqhardware
+# Problem Statement
+  AtliQ Hardware is a company that provide
+
+# Data Analysis Using MySQL
 1. Transactions Table
    
 |Field Name|Data Type|
@@ -46,9 +49,29 @@
 |product_name|String|
 
 - Analysis Data with looking all of column Table
-  There is inconsistency record in currency column. There 2 type of curency USD and INR. So convert USD into INR
+  `SELECT * FROM transaction`
+  `SELECT * FROM markets`
+  `SELECT * FROM customers`
+  `SELECT * FROM products`
+  `SELECT * FROM date`
+  
+ - Check the Null Values
+   There are some NULL value in market table, so we drop that rows and make a new table.
+  
+  `CREATE TABLE market as(SELECT * FROM markets WHERE zone IS NOT NULL)`
 
-  `CREATE TEMPORARY TABLE transactions_clean SELECT *,CASE WHEN currency ='USD' THEN sales_amount*75
+- Check duplicated Values
+  We can check duplicated values with row_number function
+
+  `WITH CTE AS (select *,row_number() over (partition by product_code,customer_code,market_code,order_date,
+			sales_qty,sales_amount  order by product_code) as rownumber
+			from transactions)
+   SELECT * FROM CTE WHERE rownumber=1`
+  
+  - Convert Currency
+    There is inconsistency record in currency column in transactions table. We can see that certain transactions are in USD. Hence, filtration of that is also needed by converting into INR.
+
+   `CREATE TEMPORARY TABLE transactions_clean SELECT *,CASE WHEN currency ='USD' THEN sales_amount*75
 			ELSE sales_amount
             END AS normalized_amount FROM transactions;`
   
@@ -56,7 +79,7 @@
   
   `CREATE TEMPORARY TABLE transaction_cleaning SELECT *, round(normalized_amount-cost_price,2) as profit, round((normalized_amount-cost_price)/normalized_amount,2) as profit_margin
    FROM transactions_clean`
-
+  
 - Find market names that have highest revenue
   
   `SELECT markets_name, sum(normalized_amount) FROM transaction_cleaning tc JOIN market m ON tc.market_code=m.markets_code GROUP BY market_code ORDER BY 2 DESC LIMIT 1`
@@ -67,7 +90,7 @@
   
 - Find total revenue every month from 2017-2020
   
-   `Select year, month_name, sum(normalized_amount) as Total_Revenue FROM transaction_cleaning tc JOIN date d ON tc.order_date=d.date GROUP BY 1,2 ORDER BY 1,2`
+ `Select year, month_name, sum(normalized_amount) as Total_Revenue FROM transaction_cleaning tc JOIN date d ON tc.order_date=d.date GROUP BY 1,2 ORDER BY 1,2`
   
 -  Find top 10 product code
   
@@ -76,10 +99,12 @@
    Select * from cte where top_sales <=10`
 
 - Find top 10 customer_name
+  
   `With cte as(SELECT custmer_name, sum(normalized_amount) as sales_qty, dense_rank()over(order by sum(normalized_amount)DESC) as Top_sales from transaction_cleaning tc join customers c ON 
   tc.customer_code=c.customer_code GROUP BY custmer_name ORDER BY sum(normalized_amount) DESC ) select * from cte where top_sales <=10`
 
 - JOIN all table
+  
   `SELECT tc.product_code, tc.customer_code, tc.market_code, order_date, sales_qty,sales_amount,currency,cost_price,
 		normalized_amount,custmer_name,customer_type,date,cy_date,year, month_name,date_yy_mmm,
 		markets_name,zone,product_type,profit,profit_margin
@@ -87,3 +112,5 @@
 								   LEFT JOIN date d ON tc.order_date=d.date
 								   LEFT JOIN market m ON tc.market_code=m.markets_code
 								   LEFT JOIN products p ON tc.product_code=p.product_code;`
+
+  # Build Dashboard Using Tableau
