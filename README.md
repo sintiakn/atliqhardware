@@ -1,6 +1,26 @@
 # Problem Statement
-  AtliQ Hardware is a company that provide
-
+  In this project performed India based AtliQ hardware company sales insights - A Data 
+  Analysis project.
+	
+  AtliQ Hardware is a company which supplies computer hardware and peripherals to many of 
+  clients. AtliQ Hardware head office is situated in Delhi, India and they have many 
+  regional office through out the India.
+	
+  Sales director for this company is facing a lot of challenges. The market is growing 
+  dynamically and sales director is facing issue in terms of tracking the sales in this 
+  dynamical growth market and he is having issues with growth of this bussiness, as overall 
+  sales was declining. He has regional manager for North India, South and Central India. 
+  Whenever he wants to get insights of these region he would call them  on the phone and 
+  regional manager give some insights to him.
+	
+  The problem was that all these thing happening is verbal and these was no proof with facts 
+  that how his business is affected and which made him frustraed as he can see that overall 
+  sales is declining but when he ask regional manager, he is not getting complete picture of 
+  this bussiness. All he wants is a simple data visualization tool which he can access on 
+  daily basis. By using such tools and technology, he can make data driven decisions which 
+  helps to increase the sales of the company. So, In this projects we will help a company 
+  make its own sales related dashboard using tableau.
+  
 # Data Analysis Using MySQL
 1. Transactions Table
    
@@ -119,4 +139,16 @@
 
 
 ![profit analysis](https://github.com/sintiakn/atliqhardware/assets/115802103/77b0ca00-97d1-488d-8ff8-09daaee1c861)
+
+insight:
+- Conclusions
+  1. Sales were rapidly decreasing in 2020 compared to 2019.
+  2. Highest revenue generated from markets such as Delhi NCR, Mumbai, Ahmedabad, Bhopal, Nagpur and so on.
+  3. Highest quantities sold in Markets such as Delhi NCR, Mumbai, Nagpur, Kochi, Ahmedabad and so on.
+  4. The most important customer for company is Electricalsara Store by Revenue as well as quantity sold.
+- Recommendations
+  1. Make a new sales strategy for lucknow since its showing lowest revenue and negative profit margin and if possible so as for Surat and Bhubaneshwar also.
+  2. Try to increase sales quantity in Patna, Surat and Kanpur since they have lowest sales quantity.
+  3. Try to give special benefits to Electronics and Excel stores as they are most profitable customers.
+  4. Make campaign strategy for mid year as they are showing high sales among other months.
 
