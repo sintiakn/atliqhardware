@@ -58,7 +58,7 @@
  - Check the Null Values
    There are some NULL value in market table, so we drop that rows and make a new table.
   
-  `CREATE TABLE market as(SELECT * FROM markets WHERE zone IS NOT NULL)`
+   `CREATE TABLE market as(SELECT * FROM markets WHERE zone IS NOT NULL)`
 
 - Check duplicated Values
   We can check duplicated values with row_number function
@@ -68,7 +68,7 @@
 			from transactions)
    SELECT * FROM CTE WHERE rownumber=1`
   
-  - Convert Currency
+- Convert Currency
     There is inconsistency record in currency column in transactions table. We can see that certain transactions are in USD. Hence, filtration of that is also needed by converting into INR.
 
    `CREATE TEMPORARY TABLE transactions_clean SELECT *,CASE WHEN currency ='USD' THEN sales_amount*75
@@ -90,12 +90,12 @@
   
 - Find total revenue every month from 2017-2020
   
- `Select year, month_name, sum(normalized_amount) as Total_Revenue FROM transaction_cleaning tc JOIN date d ON tc.order_date=d.date GROUP BY 1,2 ORDER BY 1,2`
+  `Select year, month_name, sum(normalized_amount) as Total_Revenue FROM transaction_cleaning tc JOIN date d ON tc.order_date=d.date GROUP BY 1,2 ORDER BY 1,2`
   
 -  Find top 10 product code
   
-  `with cte as(SELECT product_code, sum(normalized_amount) as 
-  sales_qty, dense_rank()over(order by sum(normalized_amount)DESC) as Top_sales from transaction_cleaning GROUP BY product_code ORDER BY sum(normalized_amount) DESC )
+   `with cte as(SELECT product_code, sum(normalized_amount) as 
+   sales_qty, dense_rank()over(order by sum(normalized_amount)DESC) as Top_sales from transaction_cleaning GROUP BY product_code ORDER BY sum(normalized_amount) DESC )
    Select * from cte where top_sales <=10`
 
 - Find top 10 customer_name
