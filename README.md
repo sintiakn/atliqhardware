@@ -140,15 +140,20 @@
 
 ![profit analysis](https://github.com/sintiakn/atliqhardware/assets/115802103/77b0ca00-97d1-488d-8ff8-09daaee1c861)
 
-insight:
-- Conclusions
-  - Sales were rapidly decreasing in 2020 compared to 2019.
-  - Highest revenue generated from markets such as Delhi NCR, Mumbai, Ahmedabad, Bhopal, Nagpur and so on.
-  - Highest quantities sold in Markets such as Delhi NCR, Mumbai, Nagpur, Kochi, Ahmedabad and so on.
-  - The most important customer for company is Electricalsara Store by Revenue as well as quantity sold.
+- Insight
+  - There was a decrease in revenue in 2020, likely due to the impact of the pandemic.
+  - From 2017 to 2020, there was a noticeable drop in revenue around the month of June, indicating a seasonal pattern in the business.
+  - August marked an increase in revenue, mirroring the success of previous years, especially in 2018-2019.
+  - The highest revenue was generated in Market Delhi, with a large quantity of items sold, but with a profit margin of only 2.3%.
+  - The customer contributing the highest revenue is Electricalsara Store, accounting for 37.75% of the total profit.
+  - Prod318 is the product that dominates in terms of revenue generation for the company.
+  - Although sales are low, Surat boasts the highest profit margin among all sales regions.
+
 - Recommendations
-  - Make a new sales strategy for lucknow since its showing lowest revenue and negative profit margin and if possible so as for Surat and Bhubaneshwar also.
-  - Try to increase sales quantity in Patna, Surat and Kanpur since they have lowest sales quantity.
-  - Try to give special benefits to Electronics and Excel stores as they are most profitable customers.
-  - Make campaign strategy for mid year as they are showing high sales among other months.
+  - Focus on Market Delhi because, although Market Delhi has high sales, the profit margin is low. The company should explore ways to enhance the margin in this market. This may include better pricing strategies, cost reduction, or increased operational efficiency.
+  - Electricalsara Store's customer significantly contributes to the company's profits. Consider strengthening the relationship with these customers, perhaps by offering incentives or loyalty programs to encourage them to continue shopping.
+  - The decrease in revenue that occurred in June from 2017 to 2020 needs further examination. Are there any seasonal factors or market trends influencing this? This analysis can assist in developing strategies to address the revenue decline during those months.
+  - If there was a significant increase in revenue in August in 2018-2019, consider identifying the contributing factors and attempting to replicate that success in the following years. This might involve special promotions or marketing campaigns aimed at boosting sales during August.
+  - While sales in Surat may not be as substantial as in other areas, note that the profit margin there is high. Consider increasing sales in this region through a more focused marketing strategy or improved customer support.
+  - The pandemic likely had a significant impact on the revenue decline in 2020. It's essential to continually monitor the pandemic situation and have a crisis plan ready if similar situations occur in the future.
 
