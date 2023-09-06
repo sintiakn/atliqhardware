@@ -13,6 +13,7 @@
 |sales_qty|Integer|
 |sales_amount|Integer|
 |curency|String|
+
 |cost_price|Integer|
 
 2. Customers Table
@@ -114,3 +115,8 @@
 								   LEFT JOIN products p ON tc.product_code=p.product_code;`
 
   # Build Dashboard Using Tableau
+![key insight](https://github.com/sintiakn/atliqhardware/assets/115802103/cc6baefc-ae14-418c-bf81-8dd303aa9ae4)
+
+
+![profit analysis](https://github.com/sintiakn/atliqhardware/assets/115802103/77b0ca00-97d1-488d-8ff8-09daaee1c861)
+
