@@ -142,13 +142,13 @@
 
 insight:
 - Conclusions
-  1. Sales were rapidly decreasing in 2020 compared to 2019.
-  2. Highest revenue generated from markets such as Delhi NCR, Mumbai, Ahmedabad, Bhopal, Nagpur and so on.
-  3. Highest quantities sold in Markets such as Delhi NCR, Mumbai, Nagpur, Kochi, Ahmedabad and so on.
-  4. The most important customer for company is Electricalsara Store by Revenue as well as quantity sold.
+  - Sales were rapidly decreasing in 2020 compared to 2019.
+  - Highest revenue generated from markets such as Delhi NCR, Mumbai, Ahmedabad, Bhopal, Nagpur and so on.
+  - Highest quantities sold in Markets such as Delhi NCR, Mumbai, Nagpur, Kochi, Ahmedabad and so on.
+  - The most important customer for company is Electricalsara Store by Revenue as well as quantity sold.
 - Recommendations
-  1. Make a new sales strategy for lucknow since its showing lowest revenue and negative profit margin and if possible so as for Surat and Bhubaneshwar also.
-  2. Try to increase sales quantity in Patna, Surat and Kanpur since they have lowest sales quantity.
-  3. Try to give special benefits to Electronics and Excel stores as they are most profitable customers.
-  4. Make campaign strategy for mid year as they are showing high sales among other months.
+  - Make a new sales strategy for lucknow since its showing lowest revenue and negative profit margin and if possible so as for Surat and Bhubaneshwar also.
+  - Try to increase sales quantity in Patna, Surat and Kanpur since they have lowest sales quantity.
+  - Try to give special benefits to Electronics and Excel stores as they are most profitable customers.
+  - Make campaign strategy for mid year as they are showing high sales among other months.
 
