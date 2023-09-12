@@ -33,7 +33,6 @@
 |sales_qty|Integer|
 |sales_amount|Integer|
 |curency|String|
-
 |cost_price|Integer|
 
 2. Customers Table
